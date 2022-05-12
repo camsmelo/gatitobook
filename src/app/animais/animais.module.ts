@@ -8,14 +8,24 @@ import { CartaoModule } from '../componentes/cartao/cartao.module';
 import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-animais.component';
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.component';
+import { MensagemModule } from '../componentes/mensagem/mensagem.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [ListaAnimaisComponent, AnimalComponent, GradeFotosAnimaisComponent, DetalheAnimalComponent, ComentariosComponent],
+  declarations: [
+    ListaAnimaisComponent, 
+    AnimalComponent, 
+    GradeFotosAnimaisComponent, 
+    DetalheAnimalComponent, 
+    ComentariosComponent,
+  ],
   imports: [
     CommonModule,
     AnimaisRoutingModule,
-    CartaoModule
+    CartaoModule,
+    SharedModule,
   ]
 })
 export class AnimaisModule { }
